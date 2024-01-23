@@ -13,7 +13,7 @@ function sleepSync(ms) {
     style:ansi.fgWhite
   }
 
-function karaokeEffect(text, speed = 100, objectparams) {
+function karaoke(text, speed = 100, objectparams) {
         let i=0;
         let animationParams={...defaultconfig, ...objectparams}
         function type(){
@@ -42,8 +42,5 @@ function karaokeEffect(text, speed = 100, objectparams) {
 
    
 }
-let obj={
-    bg:ansi.bgBlack,
-    style:ansi.bright
-}
-karaokeEffect("hi this is suraj chandra",50,obj)
+
+module.exports=karaoke;

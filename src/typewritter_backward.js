@@ -42,10 +42,5 @@ function tw_back(text, speed = 50,objectparams) {
     type();
 }
 
-let obj={
-    style:ansi.bright,
-    bg:ansi.bgBlack,
-    fg:ansi.fgYellow
-}
-tw_back("suraj chandra is the best",100,obj)
+
 module.exports=tw_back;
