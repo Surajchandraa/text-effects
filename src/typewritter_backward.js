@@ -7,8 +7,15 @@ function sleepSync(ms) {
     Atomics.wait(view, 0, 0, ms);
   }
 
-function tw_back(text, speed = 50, color=ansi.fgWhite,bg=ansi.fgWhite) {
+  let defaultconfig={
+    bg:ansi.fgWhite,
+    fg:ansi.fgWhite,
+    style:ansi.fgWhite
+  }
+
+function tw_back(text, speed = 50,objectparams) {
     let index = text.length - 1;
+    let animationParams={...defaultconfig, ...objectparams}
 
     function type() {
         const originalString = " ";
@@ -17,7 +24,7 @@ function tw_back(text, speed = 50, color=ansi.fgWhite,bg=ansi.fgWhite) {
         process.stdout.write(repeatedString);
 
         if (index >= 0) {
-            process.stdout.write(bg+color+text[index]+ansi.reset);
+            process.stdout.write(animationParams.style+animationParams.bg+animationParams.fg+text[index]+ansi.reset);
             readline.cursorTo(process.stdout, 0);
             index--;
 
@@ -35,4 +42,10 @@ function tw_back(text, speed = 50, color=ansi.fgWhite,bg=ansi.fgWhite) {
     type();
 }
 
+let obj={
+    style:ansi.bright,
+    bg:ansi.bgBlack,
+    fg:ansi.fgYellow
+}
+tw_back("suraj chandra is the best",100,obj)
 module.exports=tw_back;

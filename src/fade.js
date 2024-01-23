@@ -22,7 +22,7 @@ function fadeToDarkEffect(text, speed = 100) {
         readline.cursorTo(process.stdout, 0);
 
         process.stdout.write(fadedText);
-        i += 5; // You can adjust the speed of the fade by changing this increment
+        i += 5; 
 
         if (i <= 255) {
             sleepSync(speed);

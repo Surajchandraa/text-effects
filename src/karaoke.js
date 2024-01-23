@@ -7,11 +7,18 @@ function sleepSync(ms) {
     Atomics.wait(view, 0, 0, ms);
   }
 
-function karaokeEffect(text, speed = 100, highlightColor = ansi.fgRed, originalColor = ansi.reset) {
-        let i=0
+  let defaultconfig={
+    bg:ansi.fgWhite,
+    fg:ansi.fgWhite,
+    style:ansi.fgWhite
+  }
+
+function karaokeEffect(text, speed = 100, objectparams) {
+        let i=0;
+        let animationParams={...defaultconfig, ...objectparams}
         function type(){
-        const highlightedText = highlightColor + text[i];
-        const remainingText = originalColor + text.substring(i + 1);
+        const highlightedText = animationParams.style+animationParams.bg+animationParams.fg + text[i]+ansi.reset;
+        const remainingText = text.substring(i + 1);
         const output = highlightedText + remainingText;
 
         readline.clearLine(process.stdout, 0);
@@ -35,4 +42,8 @@ function karaokeEffect(text, speed = 100, highlightColor = ansi.fgRed, originalC
 
    
 }
-
+let obj={
+    bg:ansi.bgBlack,
+    style:ansi.bright
+}
+karaokeEffect("hi this is suraj chandra",50,obj)
