@@ -5,13 +5,19 @@ function sleepSync(ms) {
     const view = new Int32Array(buffer);
     Atomics.wait(view, 0, 0, ms);
   }
+
+let defaultconfig={
+  bg:ansi.fgWhite,
+  fg:ansi.fgWhite,
+  style:ansi.fgWhite
+}
   
-  function tw_forward(text, speed = 50, color=ansi.white) {
+  function tw_forward(text, speed = 50, objectparams) {
     
     let index = 0;
-  
+    let animationParams = { ...defaultconfig, ...objectparams };
     function typeSync() {
-      process.stdout.write(color+text[index]+ansi.reset);
+      process.stdout.write(animationParams.style+animationParams.bg+animationParams.fg+text[index]+ansi.reset);
       index++;
   
       if (index < text.length) {
@@ -25,5 +31,7 @@ function sleepSync(ms) {
     typeSync();
   }
   
+
+
   module.exports=tw_forward
   
