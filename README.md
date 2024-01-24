@@ -1,10 +1,10 @@
-# text-animate
-`text-animate` is a simple Node.js library for animating text output in the console with customizable styling and speed.
+# text-effects
+`text-effects` is a simple Node.js library for animating text output in the console with customizable styling and speed.
 
 
 
 ## installation 
-- `npm install text-animate`
+- `npm install text-effects`
 or
 - clone this repository.
 
@@ -19,7 +19,7 @@ or
 - **styles**-  An object containing properties for customizing the text style.
 
 ```js
-    const animate = require('text-animate');
+    const animate = require('text-effects');
     
 
     let obj={
@@ -45,7 +45,7 @@ or
 
 
 ```js
-    const animate = require('text-animate');
+    const animate = require('text-effects');
     
 
     let obj={
