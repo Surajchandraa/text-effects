@@ -99,3 +99,10 @@ Background Colors:
 - White: `ansi.bgWhite`
 
 - ***Note: you can use your own ansi colors for styling***
+
+<!-- let obj={
+    style:ansi.bright,
+    bg:ansi.bgBlack,
+    fg:ansi.fgGreen
+}
+const stopAnimation = scrollText('hi i am suraj chandra joshi and i am an engineering student ', 100, obj); -->
