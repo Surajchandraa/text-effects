@@ -12,7 +12,7 @@ function sleepSync(ms) {
     Atomics.wait(view, 0, 0, ms);
 }
 
-function fadeToDarkEffect(text, speed = 100) {
+function fade(text, speed = 100) {
     let i = 0;
 
     function applyFade() {
@@ -36,4 +36,4 @@ function fadeToDarkEffect(text, speed = 100) {
     applyFade();
 }
 
-fadeToDarkEffect("Text with fading effect");
+module.exports=fade;

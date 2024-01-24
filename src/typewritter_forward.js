@@ -31,15 +31,5 @@ let defaultconfig={
     typeSync();
   }
   
-let obj={
-  style:ansi.bright,
-  bg:ansi.bgBlue,
-  fg:ansi.fgRed,
-  
-}
-
-for(let i=0;i<20;i++){
-tw_forward("hi this is a text animation library.",100,obj)
-}
   module.exports=tw_forward;
   

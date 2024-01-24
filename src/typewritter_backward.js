@@ -42,5 +42,4 @@ function tw_back(text, speed = 50,objectparams) {
     type();
 }
 
-
 module.exports=tw_back;
