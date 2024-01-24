@@ -37,7 +37,7 @@ or
 - ![Text Animation GIF](out/output_f.gif "Text Animation Demo")
 
 >>>
-**2. tw_back(text,delay,styles)**
+## **2. tw_back(text,delay,styles)**
 
 - **text**- "text to be animated"
 - **delay**-  delay between each latter is printing on screen in milisecond. or we can say it is speed of animation.
@@ -64,7 +64,26 @@ or
 - ![Text Animation GIF](out/output_b.gif "Text Animation Demo")
 
 >>>
-**3. karaoke(text,delay,styles)**
+## **3. karaoke(text,delay,styles)**
+
+>>>
+## **4. scroll(text,speed,styles)**
+```js
+    const animate = require('text-effects');
+
+    let obj={
+    style:animate.ansi.bright,
+    bg:animate.ansi.bgBlack,
+    fg:animate.ansi.fgGreen
+}
+    const stopAnimation = animate.scroll('hello world!', 100, obj);
+
+    //stopAnimation is an function returned by scroll function and can be used to stop the animation. If you call stopAnimation inside a settimeout function than you can stop animation after some time otherwise this animation will animate untill you stop it.
+
+    
+
+
+```
 
 ## Styling with ansi Module
 - The ansi module provides convenient styling options that you can use with the text-animate functions. Here are the available styles:
@@ -100,9 +119,4 @@ Background Colors:
 
 - ***Note: you can use your own ansi colors for styling***
 
-<!-- let obj={
-    style:ansi.bright,
-    bg:ansi.bgBlack,
-    fg:ansi.fgGreen
-}
-const stopAnimation = scrollText('hi i am suraj chandra joshi and i am an engineering student ', 100, obj); -->
+
