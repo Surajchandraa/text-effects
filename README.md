@@ -119,4 +119,35 @@ Background Colors:
 
 - ***Note: you can use your own ansi colors for styling***
 
+## Custom colors:
+- make RGB custom colors according to you for the animation.
+```js
+     const animate = require('text-effects');
+
+
+    //get custom background
+    let background=animate.customBg(100,100,100); //give RGB value. 
+
+    //get custom forground
+    let fground=animate.customFg(12,34,54);
+
+    let obj={
+    bg:background,
+    fg:fground
+}
+
+    let stop=animate.scroll('hello world!', 100, obj);
+
+```
+
+## styling object:
+- it is an object can be given as argument to animation functions.
+```js
+    let obj={
+        style:ansi.bright, //you can give any ansi style value here and if u dont give it take take by default no style.
+        
+    }
+
+    //if you don't give this obj as argument to animation functions than it will take by default object that is defined in code.
+```
 
