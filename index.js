@@ -3,6 +3,7 @@ const fade=require("./src/fade");
 const karaoke=require("./src/karaoke");
 const tw_back=require("./src/typewritter_backward");
 const tw_forward=require("./src/typewritter_forward");
-const scroll=require("./src/scroll")
+const scroll=require("./src/scroll");
+const {customBg,customFg}=require("./src/custom_colors");
 
-module.exports={ansi,fade,karaoke,tw_back,tw_forward,scroll};
+module.exports={ansi,fade,karaoke,tw_back,tw_forward,scroll,customBg,customFg};
