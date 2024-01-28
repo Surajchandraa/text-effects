@@ -66,8 +66,11 @@ or
 >>>
 ## **3. karaoke(text,delay,styles)**
 
+>>
+## **4. blink(text,delay,styles)**
+
 >>>
-## **4. scroll(text,speed,styles)**
+## **5. scroll(text,speed,styles)**
 ```js
     const animate = require('text-effects');
 
