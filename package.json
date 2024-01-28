@@ -1,6 +1,6 @@
 {
   "name": "text-effects",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Animate text on the terminal/console with dynamic typewriter effects using this JavaScript library for engaging and interactive command-line experiences.",
   "keywords": [
     "text",
