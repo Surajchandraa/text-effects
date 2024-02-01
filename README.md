@@ -87,7 +87,8 @@ or
 
 
 ```
-
+## **6. fadein**
+## **7. fadeout**
 ## Styling with ansi Module
 - The ansi module provides convenient styling options that you can use with the text-animate functions. Here are the available styles:
 - Reset: `ansi.reset`
