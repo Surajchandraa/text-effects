@@ -154,4 +154,5 @@ Background Colors:
 
     //if you don't give this obj as argument to animation functions than it will take by default object that is defined in code.
 ```
-
+## Contribution:
+- Contributions are welcome! Feel free to submit bug reports, feature requests, or pull requests.
