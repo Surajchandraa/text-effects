@@ -7,4 +7,5 @@ const scroll=require("./src/scroll");
 const {customBg,customFg}=require("./src/custom_colors");
 const blink=require("./src/blinking");
 const {fadein,fadeout}=require("./src/fade");
-module.exports={ansi,fade,karaoke,tw_back,tw_forward,scroll,customBg,customFg,blink,fadein,fadeout};
+const glitch1=require('./src/glitch1');
+module.exports={ansi,fade,glitch1,karaoke,tw_back,tw_forward,scroll,customBg,customFg,blink,fadein,fadeout};
