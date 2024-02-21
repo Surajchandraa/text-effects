@@ -1,5 +1,5 @@
-const { time } = require('console');
 const readline = require('readline');
+const ansi=require('./ansi');
 
 function sleepSync(ms) {
     const buffer = new SharedArrayBuffer(4);
@@ -17,17 +17,24 @@ function ascii(number){
     return String.fromCharCode(number);
 }
 
-function glitch1(text,speed){
+let defaultconfig={
+    bg:ansi.fgWhite,
+    fg:ansi.fgWhite,
+    style:ansi.fgWhite
+  }
+
+function glitch1(text,speed,obj){
 
     let index=0;
+    let animationParams={...defaultconfig, ...obj};
     function typeSync(){
         
         while (index<text.length){
             
-            process.stdout.write(ascii(gen_random(126,32)));
+            process.stdout.write(animationParams.style+animationParams.bg+animationParams.fg+ascii(gen_random(126,32))+ansi.reset);
             sleepSync(speed);
             readline.cursorTo(process.stdout, index);
-            process.stdout.write(text.charAt(index));
+            process.stdout.write(animationParams.style+animationParams.bg+animationParams.fg+text.charAt(index)+ansi.reset);
             readline.clearLine(process.stdout,1);
             sleepSync(speed);
             index++;
