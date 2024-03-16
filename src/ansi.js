@@ -24,8 +24,22 @@ const ansi = {
     bgMagenta: '\x1b[45m',
     bgCyan: '\x1b[46m',
     bgWhite: '\x1b[47m',
+
+    
+    crossedOut: '\x1b[9m',
+    framed: '\x1b[51m',
+    encircled: '\x1b[52m',
+    overline: '\x1b[53m',
+    ideogramUnderline: '\x1b[60m',
+    ideogramDoubleUnderline: '\x1b[61m',
+    ideogramOverline: '\x1b[62m',
+    ideogramDoubleOverline: '\x1b[63m',
+
+  
 };
 
 module.exports = ansi;
+
+
 
 
