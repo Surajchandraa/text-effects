@@ -8,4 +8,6 @@ const {customBg,customFg}=require("./src/custom_colors");
 const blink=require("./src/blinking");
 const {fadein,fadeout}=require("./src/fade");
 const glitch1=require('./src/glitch1');
-module.exports={ansi,fade,glitch1,karaoke,tw_back,tw_forward,scroll,customBg,customFg,blink,fadein,fadeout};
+const glitch2=require('./src/glitch2');
+const typewritterforwardcont=require('./src/typewritter_forward_continious');
+module.exports={ansi,fade,glitch1,karaoke,tw_back,tw_forward,scroll,customBg,customFg,blink,fadein,fadeout,glitch2,typewritterforwardcont};
