@@ -1,5 +1,4 @@
 
-const { read } = require("fs");
 const ansi=require("./ansi");
 const readline = require("readline")
 
@@ -39,7 +38,7 @@ let defaultConfig = {
 function typewritterforwardcont(text,speed,objectparams){
     let animationParams = { ...defaultConfig, ...objectparams };
     let suraj = setInterval(() => {
-        tw_forward(text, speed, animationParams); // Pass a function reference
+        tw_forward(text, speed, animationParams); 
       }, speed);
     return function stopScrolling(){
         clearInterval(suraj);
@@ -53,10 +52,6 @@ function typewritterforwardcont(text,speed,objectparams){
     }
 }
 
-let objet={
-    bg:ansi.bgBlack,
-    fg:ansi.fgRed,
-    style:ansi.bright
-}
+
 
 module.exports=typewritterforwardcont;
